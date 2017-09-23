@@ -1,0 +1,9 @@
+Vagrant.configure("2") do |config|
+  #config.vm.box = "chief1983/trueos-desktop64"
+  config.vm.box = "chief1983/trueos-server64"
+  config.vm.box_version = "20170601.0.0"
+  config.vm.network "private_network", ip: "192.168.17.20"
+  config.vm.synced_folder ".", "/vagrant", type: "nfs"
+end
+
+
